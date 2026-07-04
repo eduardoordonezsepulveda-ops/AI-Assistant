@@ -7,16 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CENTRO DE CONTROL"
-        android:textColor="#00E5FF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="40dp"/>
-
-    <Button android:id="@+id/btn_iniciar" android:layout_width="match_parent" android:layout_height="60dp" android:text="INICIAR ASISTENTE" android:backgroundTint="#FF007F" android:layout_marginBottom="15dp"/>
-    <Button android:id="@+id/btn_personalidad" android:layout_width="match_parent" android:layout_height="60dp" android:text="PERSONALIDAD IA" android:backgroundTint="#333333" android:layout_marginBottom="15dp"/>
-    <Button android:id="@+id/btn_ajustes" android:layout_width="match_parent" android:layout_height="60dp" android:text="CONFIGURACIONES" android:backgroundTint="#333333"/>
+    <Button android:id="@+id/btn_iniciar" android:layout_width="match_parent" android:layout_height="60dp" android:text="INICIAR ASISTENTE"/>
+    <Button android:id="@+id/btn_personalidad" android:layout_width="match_parent" android:layout_height="60dp" android:text="PERSONALIDAD"/>
+    <Button android:id="@+id/btn_ajustes" android:layout_width="match_parent" android:layout_height="60dp" android:text="AJUSTES"/>
 </LinearLayout>
