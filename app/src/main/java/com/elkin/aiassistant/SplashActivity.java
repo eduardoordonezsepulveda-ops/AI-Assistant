@@ -11,15 +11,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Espera 3 segundos (3000ms) y pasa a MainActivity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish(); // Destruye esta pantalla para que no vuelvan a ella
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                finish();
             }
-        }, 3000);
+        }, 3000); // Espera 3 segundos
     }
 }
-
