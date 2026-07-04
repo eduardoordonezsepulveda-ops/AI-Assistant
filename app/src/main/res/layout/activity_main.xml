@@ -1,66 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212">
+    android:background="#121212"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
 
-    <!-- Panel principal para la animación -->
-    <LinearLayout
-        android:id="@+id/panel_principal"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="20dp">
+        android:text="CENTRO DE CONTROL"
+        android:textColor="#00E5FF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
 
-        <!-- CardView recorta tu imagen y la pone redondeada -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            app:cardCornerRadius="40dp"
-            app:cardElevation="0dp"
-            android:layout_marginBottom="20dp"
-            app:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/icono_app"
-                android:scaleType="centerCrop"/>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Títulos -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IA ASSISTANT"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#00E5FF"
-            android:layout_marginBottom="5dp"/>
-
-        <TextView
-            android:id="@+id/texto_estado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sistema Listo"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="40dp"/>
-
-        <!-- Botón -->
-        <Button
-            android:id="@+id/btn_iniciar_ia"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:text="INICIAR SISTEMA"
-            android:backgroundTint="#FF007F"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:cornerRadius="15dp"/>
-
-    </LinearLayout>
-</RelativeLayout>
+    <Button android:id="@+id/btn_iniciar" android:layout_width="match_parent" android:layout_height="60dp" android:text="INICIAR ASISTENTE" android:backgroundTint="#FF007F" android:layout_marginBottom="15dp"/>
+    <Button android:id="@+id/btn_personalidad" android:layout_width="match_parent" android:layout_height="60dp" android:text="PERSONALIDAD IA" android:backgroundTint="#333333" android:layout_marginBottom="15dp"/>
+    <Button android:id="@+id/btn_ajustes" android:layout_width="match_parent" android:layout_height="60dp" android:text="CONFIGURACIONES" android:backgroundTint="#333333"/>
+</LinearLayout>
