@@ -2,21 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.elkin.aiassistant">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icono_app"
         android:roundIcon="@drawable/icono_app"
         android:label="IA Assistant"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+
+        <!-- Splash Activity es la primera en abrir -->
+        <activity android:name=".SplashActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Main Activity se abre después -->
+        <activity android:name=".MainActivity" android:exported="false"/>
+        
+        <service android:name=".FloatingWindowService" android:exported="false"/>
+    </application>
 </manifest>
