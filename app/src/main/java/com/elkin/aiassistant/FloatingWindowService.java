@@ -17,9 +17,8 @@ public class FloatingWindowService extends Service {
         super.onCreate();
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         floatingView = new ImageView(this);
-        floatingView.setImageResource(R.drawable.icono_app); // Usa tu icono
+        floatingView.setImageResource(R.drawable.icono_app); 
 
-        // Configuración de la burbuja (tamaño y posición)
         final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 150, 150,
                 WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
@@ -31,12 +30,6 @@ public class FloatingWindowService extends Service {
         params.y = 100;
 
         windowManager.addView(floatingView, params);
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (floatingView != null) windowManager.removeView(floatingView);
     }
 
     @Override
